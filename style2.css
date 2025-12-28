@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a; 
+  color: white;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  background-color: #ff4655; 
+  padding: 15px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+a {
+  color: #0a0a0a;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background: #0a0a0a;
+    color: #ff4655;
+    border-radius: 8px;
+}
+
+.card {
+  background-color: #ff4655;
+  color: #0a0a0a;
+  padding: 25px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+
+.padding {
+  padding: 30px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+font-size: 35px;
+  text-align: center;
+}
+
+.row4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.row4 div:hover {
+  transform: translateY(-10px);
+  transition: transform 1s;
+}
+
+.scroll-padding {
+  padding: 0px 5% 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 15px 0;
+  scrollbar-width: thin; 
+}
+
+
+.scroll-item {
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  display: inline-block; 
+  width: 320px;
+  height: 400px;
+}
+
+.scroll-item img {
+  display: block;
+  width: 100%;
+  height: auto; 
+}
+
+.scroll-item__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+}
+
+.scroll-item2 {
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  display: inline-block; 
+  width: 320px;
+  height: 200px;
+  padding-left: 10px;
+}
+
+.scroll-item2 img {
+  display: block;
+  width: 100%;
+  height: 100%; 
+}
+
+
+footer {
+  background-color: #ff4655;
+  color: #0a0a0a;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+
+@media (max-width: 750px) {
+  .row4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .row,
+  .section {
+    padding: 20px 5%;
+  }
+
+  .scroll-item {
+    min-width: 140px;
+    height: 100px;
+  }
+}
